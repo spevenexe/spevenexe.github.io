@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+</head>
+<body>
+    <header>
+        <h1>Terrence Li's Portfolio</h1>
+        <nav>
+            <a href="#about">
+                About
+            </a>
+            <a href="#projects">
+                Projects
+            </a>
+            <a href="#contact">
+                Contact
+            </a>
+        </nav>
+    </header>
+
+    <main>
+
+        <section id="about">
+            <h2>About</h2>
+            I am a graduate Computer Science major, specializing in Intelligent Systems at the University of Texas at Dallas. Set to graduate Fall 2025.
+            <figure>
+                <img src="https://c.tenor.com/Eki_5HXRYiYAAAAd/tenor.gif" alt="placeholder img">
+                <figcaption>
+                    This picture is pretty cool right?
+                </figcaption>
+            </figure>
+        </section>
+
+        <section id="projects">
+            <h2>Projects</h2>
+            <article>
+                <h3>NLP Research</h3>
+                <p>Working in a lab at UTD to investigate the reasoning capabilities of LLMs. This particular work evalutates the ability of models to combine visual and textual elements, factor in contemporary knowledge, and recognize fallacious reasoning. To accomplish this, our lab is producing annotations that represent the stepwise human reasoning proess. This data can then be used to evaluate the multimodal reasoning capabilities of state-of-the-art models.</p>
+                <a href="https://profiles.utdallas.edu/vince">Link to professor's page.</a>
+                <ul>
+                    <li>Surveyed argument mining research to design an annotation procedure that could represent human reasoning</li>
+                    <li>Curated a taxonomy and designed a method for identifying fallacies within human annotations</li>
+                    <li>Directed a group of annotators over the procedure to ensure timely and high-quality data</li>
+                    <li>Evaulated the reasoning of several SOTA models with the annotations</li>
+                </ul>
+            </article>
+            <article>
+                <h3>Emerson SPL Calculation</h3>
+                <p>Worked with a small team of students to produce a noise calculation application that conforms to IEC standards. Specifically Emerson needs to approximate the sound produced by their machines to ensure that they stay below city ordinance maximums. Their former method of calcuation was accomplished via manual calcuation with Excel sheets, which was prone to human error. Our solution leverages the IEC formulas to automate the process. An Emerson engineer could instead input all of the sensor data and automatically automatically receive the noise calculation.</p>
+                <a href="https://www.emerson.com/en-us">Link to Emerson's website</a>
+                <ul>
+                    <li>Utilized Python, ElectronJS, and TailwindCSS to create a user-friendly interface for Emerson engineers.</li>
+                    <li>Adapted standards and cross-referenced with Emerson's noise calculation techniques to produce precise noise level calculations.</li>
+                    <li>Maintained detailed documentation with references to external resources to quickly onboard software developers/maintainers.</li>
+                </ul>
+            </article>
+        </section>
+
+        <section id="contact">
+            <h2>Contact</h2>
+            <form action="#">
+                <label for="name"> Name:
+                    <input name="name" id="name" type="text">
+                </label>
+            
+            
+                <label for="email"> Email:
+                    <input name="email" id="email" type="email">
+                </label>
+                <div>
+                    <label for="message"> 
+                        Message: <br>
+                        <textarea name="message" id="message" rows="3" cols="50" placeholder="Enter a message..."></textarea>
+                    </label>
+                </div>
+                <button type="submit">submit</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>© Terrence Li. All rights reserved.</p>
+        <a href="https://github.com/spevenexe">Github</a>
+        <a href="mailto:txl210028@utdallass.edu">Email</a>
+    </footer>
+</body>
+</html>

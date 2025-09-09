@@ -3,21 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Portfolio</title>
-    <style>
-        aside {
-            float: right;
-            width: 20%;
-            margin: 1rem;
-            color: #333;
-            font-family: google, 'Courier New', Courier, monospace;
-        }
-    </style>
 </head>
 <body>
     <header>
-        <h1>Terrence Li's Portfolio</h1>
-        <nav>
+        <h1 class="page-title">Terrence Li's Portfolio</h1>
+        <nav class="nav-box">
             <a href="#about">
                 About
             </a>
@@ -30,78 +22,91 @@
         </nav>
     </header>
 
-    <main>
+    <main class="container">
 
         <section id="about">
             <h2>About</h2>
-            <p>
-                I am a graduate Computer Science major, specializing in Intelligent Systems at the University of Texas at Dallas. Set to graduate Fall 2025.
-            </p>
-            <figure>
-                <img src="https://via.placeholder.com/150" alt="placeholder img">
-                <!-- <img src="https://c.tenor.com/Eki_5HXRYiYAAAAd/tenor.gif" alt="placeholder img"> -->
-                <figcaption>
-                    <b>Caption:</b> This picture is pretty cool right?
-                </figcaption>
-            </figure>
+            <div class="about-grid">
+                <!-- avoid weird <p> nesting issues -->
+                <div class="about-desc">
+                    <p>
+                        I am a graduate Computer Science major, specializing in Intelligent Systems at the University of Texas at Dallas. Set to graduate Fall 2025. I research NLP in between job searches.
+                    </p>
+                    <p>
+                        In my freetime I play games, <a href="https://jie-fang.github.io/blog/basics-of-ricing#:~:text=The%20term%20%E2%80%98rice,by%20the%20user.">rice</a> my Arch Linux desktop, draw, and play the drums.
+                    </p>
+                </div>
+                <figure class="about-picture">
+                    <img class="profile-pic" src="me.jpg" alt="a picture of me with my bandmates">
+                    <figcaption>
+                        Me with my bandmates. (I'm on the right)
+                    </figcaption>
+                </figure>
+            </div>
         </section>
 
         <section id="projects">
             <h2>Projects</h2>
             <article>
                 <h3>NLP Research</h3>
-                <aside>
-                    <p>
-                        <b>Note:</b> Contact me for more information on research. I require approval from my director before sharing more information.  
-                    </p>
-                </aside>
-                <p>Working in a lab at UTD to investigate the reasoning capabilities of LLMs. This particular work evalutates the ability of models to combine visual and textual elements, factor in contemporary knowledge, and recognize fallacious reasoning. To accomplish this, our lab is producing annotations that represent the stepwise human reasoning proess. This data can then be used to evaluate the multimodal reasoning capabilities of state-of-the-art models.</p>
-                <a href="https://profiles.utdallas.edu/vince">Link to professor's page.</a>
-                <ul>
-                    <li>Surveyed argument mining research to design an annotation procedure that could represent human reasoning</li>
-                    <li>Curated a taxonomy and designed a method for identifying fallacies within human annotations</li>
-                    <li>Directed a group of annotators over the procedure to ensure timely and high-quality data</li>
-                    <li>Evaulated the reasoning of several SOTA models with the annotations</li>
-                </ul>
-            </article>
-            <article>
-                <h3>Emerson SPL Calculation</h3>
-                <p>Worked with a small team of students to produce a noise calculation application that conforms to IEC standards. Specifically Emerson needs to approximate the sound produced by their machines to ensure that they stay below city ordinance maximums. Their former method of calcuation was accomplished via manual calcuation with Excel sheets, which was prone to human error. Our solution leverages the IEC formulas to automate the process. An Emerson engineer could instead input all of the sensor data and automatically automatically receive the noise calculation.</p>
-                <a href="https://www.emerson.com/en-us">Link to Emerson's website</a>
-                <ul>
-                    <li>Utilized Python, ElectronJS, and TailwindCSS to create a user-friendly interface for Emerson engineers.</li>
-                    <li>Adapted standards and cross-referenced with Emerson's noise calculation techniques to produce precise noise level calculations.</li>
-                    <li>Maintained detailed documentation with references to external resources to quickly onboard software developers/maintainers.</li>
-                </ul>
+                <!-- we wrap this in a grid to separate the title -->
+                <div class="article-grid">
+                    <p class="article-description">Working in a lab at UTD to investigate the reasoning capabilities of LLMs. This particular work evalutates the ability of models to combine visual and textual elements, factor in contemporary knowledge, and recognize fallacious reasoning. To accomplish this, our lab is producing annotations that represent the stepwise human reasoning proess. This data can then be used to evaluate the multimodal reasoning capabilities of state-of-the-art models. <a href="https://profiles.utdallas.edu/vince">Link to professor's page.</a></p>
+                    <aside class="article-aside">
+                        <p>
+                            <b>Note:</b> Contact me for more information on research. I require approval from my director before sharing more information.  
+                        </p>
+                    </aside>
+                    <ul class="article-list">
+                        <li>Surveyed argument mining research to design an annotation procedure that could represent human reasoning</li>
+                        <li>Curated a taxonomy and designed a method for identifying fallacies within human annotations</li>
+                        <li>Directed a group of annotators over the procedure to ensure timely and high-quality data</li>
+                        <li>Evaulated the reasoning of several SOTA models with the annotations</li>
+                    </ul>
+                </div>
+                </article>
+
+                <article>
+                    <h3>Emerson SPL Calculation</h3>
+                    <div class="article-grid">
+                        <p class="article-description">Worked with a small team of students to produce a noise calculation application that conforms to IEC standards. Specifically Emerson needs to approximate the sound produced by their machines to ensure that they stay below city ordinance maximums. Their former method of calcuation was accomplished via manual calcuation with Excel sheets, which was prone to human error. Our solution leverages the IEC formulas to automate the process. An Emerson engineer could instead input all of the sensor data and automatically automatically receive the noise calculation. <a href="https://www.emerson.com/en-us">Link to Emerson's website</a></p>
+                        
+                        <ul class="article-list">
+                            <li>Utilized Python, ElectronJS, and TailwindCSS to create a user-friendly interface for Emerson engineers.</li>
+                            <li>Adapted standards and cross-referenced with Emerson's noise calculation techniques to produce precise noise level calculations.</li>
+                            <li>Maintained detailed documentation with references to external resources to quickly onboard software developers/maintainers.</li>
+                        </ul>
+                    </div>
             </article>
         </section>
 
         <section id="contact">
             <h2>Contact</h2>
-            <form action="#">
-                <label for="name"> Name:
-                    <input name="name" id="name" type="text">
+            <form class="contact-form" action="#">
+                <label class="name-label" for="name-input"> Name:
+                    <input name="name" id="name-input" type="text">
                 </label>
             
             
-                <label for="email"> Email:
-                    <input name="email" id="email" type="email">
+                <label class="email-label" for="email-input"> Email:
+                    <input name="email" id="email-input" type="email">
                 </label>
-                <div>
-                    <label for="message"> 
-                        Message: <br>
-                        <textarea name="message" id="message" rows="3" cols="50" placeholder="Enter a message..."></textarea>
-                    </label>
-                </div>
+
+                <label class="message-label" for="message-input"> 
+                    Message: <br>
+                    <textarea name="message" id="message-input" placeholder="Enter a message..."></textarea>
+                </label>
                 <button type="submit">submit</button>
             </form>
         </section>
     </main>
 
     <footer>
-        <p>© Terrence Li. All rights reserved.</p>
-        <a href="https://github.com/spevenexe">Github</a>
-        <a href="mailto:txl210028@utdallass.edu">Email</a>
+        <div class="footer-links">
+            <a href="https://github.com/spevenexe">Github</a>
+            <a href="mailto:txl210028@utdallass.edu">Email</a>
+        </div>
+        <p id="copyright">© Terrence Li. All rights reserved.</p>
     </footer>
 </body>
 </html>

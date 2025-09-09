@@ -1,0 +1,281 @@
+/* global styling */
+
+html {
+    /* ensure gradient spans the screen */
+    min-height: 100%; 
+}
+
+@font-face {
+  font-family: 'JetBrains Mono';
+  src: url('https://cdn.jsdelivr.net/gh/JetBrains/JetBrainsMono/web/woff2/JetBrainsMono-Regular.woff2') format('woff2');
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'JetBrains Mono Bold';
+  src: url('https://cdn.jsdelivr.net/gh/JetBrains/JetBrainsMono/web/woff2/JetBrainsMono-Bold.woff2') format('woff2');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+body {
+    background-image: linear-gradient(rgba(159, 227, 227, 0.864),rgba(134, 134, 224, 0.826));
+    color: rgb(255, 252, 248);
+    text-shadow: 2px 2px 3px rgba(255, 192, 203, 0.966);
+    font-size: 1.2rem;
+    margin: 2rem;
+    font-family: 'JetBrains Mono';
+}
+
+
+a {
+    color: rgb(118, 140, 220);
+    text-shadow: 1px 1px 2px rgba(202, 113, 210, 0.82);
+}
+
+a:hover {
+    color: plum;
+}
+
+/* Header */
+
+.page-title {
+    text-align: center;
+    font-size: 5rem;
+    text-shadow: 3px 3px 4px rgba(255, 197, 104, 0.611);
+    font-family: 'JetBrains Mono Bold';
+}
+
+/* Navigation */
+
+/* this is where I use the flex box */
+.nav-box {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    
+    border: 4px solid white;
+    border-radius: 2rem;
+    box-shadow: 3px 3px 4px rgba(215, 147, 210, 0.61);
+    padding: .75rem;
+    
+    /* this aligns the nav bar to the center */
+    margin: 0 auto;
+    max-width: 75%;
+}
+
+.nav-box > * {
+    color:white;
+    text-decoration: none;
+    font-size: 3rem;
+    text-shadow: 3px 3px 4px rgba(185, 118, 179, 0.548);
+    padding: 0.25rem;
+}
+
+/* Body */
+
+/* Section */
+section > h2 {
+    font-size: 2.5rem;
+    text-decoration: underline;
+}
+
+/* About */
+.about-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr;
+}
+
+.about-desc {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.about-picture {
+    grid-column: 2/3;
+    grid-row: 1;
+}
+
+.profile-pic {
+    max-height: 20rem;
+
+    border: 4px solid white;
+    border-radius: 1rem;
+    box-shadow: 3px 3px 4px rgba(255, 197, 104, 0.611);
+}
+
+/* Projects */
+#projects > article {
+    border: 4px solid white;
+    border-radius: 2rem;
+    box-shadow: 3px 3px 4px rgba(215, 147, 210, 0.61);
+    margin: 1rem;
+    padding: 1rem;
+}
+
+/* Grid pattern arrangments */
+
+.article-grid {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 0rem 2rem;
+}
+
+.article-description {
+    grid-column: 1 / 2;
+    grid-row: 1;
+}
+
+.article-aside {
+    color: #333;
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.article-list {
+    grid-column: 1 / 3;
+    grid-row: 2;
+}
+
+.article-list > li {
+    margin: 1rem;
+}
+
+#projects > article > h3 {
+    font-size: 1.5rem;
+}
+
+/* Contact */
+
+.contact-form {
+    border: 4px solid white;
+    border-radius: 2rem;
+    box-shadow: 3px 3px 4px rgba(215, 147, 210, 0.61);
+    margin: 1rem;
+    padding: 1rem;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 3fr 1fr;
+    gap: 1rem;
+}
+
+/* grid layout */
+.name-label {
+    grid-column: 1/3;
+}
+
+.email-label {
+    grid-column: 3/5;
+}
+
+.message-label {
+    grid-column: 1/5;
+    grid-row: 2;
+}
+
+.contact-form > button {
+    grid-column: 2/4;
+    grid-row: 3;
+}
+
+/* styling the input fields */
+.contact-form > label {
+    font-size: 1.5rem;
+    font-family: 'JetBrains Mono';
+}
+
+.contact-form > label > input {
+    font-size: 1.5rem;
+    font-family: 'JetBrains Mono';
+    
+    width: 80%;
+
+    /* style the blank */
+    background-color: transparent;
+    border: 0;
+    border-bottom: 4px solid white;
+    border-radius: .1rem;
+    /* hide horizontal shadows */
+    box-shadow: 0 5px 2px -2px rgba(215, 147, 210, 0.61);
+
+    /* text color */
+    color: rgb(255, 252, 248);
+    text-shadow: 2px 2px 3px rgba(128, 204, 239, 0.966);
+}
+
+#message-input {
+    font-size: 1.2rem;
+    font-family: 'JetBrains Mono';
+    
+    min-width: 100%;
+    width: 10rem;
+    resize: vertical;
+
+    /* style the background*/
+    background-color: rgba(177, 177, 243, 0.826);
+    border: 4px solid white;
+    border-radius: 1rem;
+    box-shadow: 3px 3px 4px rgba(215, 147, 210, 0.61);
+
+    /* text color */
+    color: rgb(255, 252, 248);
+    text-shadow: 2px 2px 3px rgba(128, 204, 239, 0.966);
+}
+
+.contact-form > button {
+    font-size: 1.5rem;
+    font-family: 'JetBrains Mono';
+
+    /* button color */
+    background-color: rgba(207, 139, 237, 0.826);
+    border: 2px solid white;
+    border-radius: 1rem;
+    box-shadow: 3px 3px 4px rgba(215, 147, 210, 0.61);
+
+    /* text color */
+    color: rgb(255, 252, 248);
+    text-shadow: 2px 2px 3px rgba(255, 192, 203, 0.966);
+}
+
+.contact-form > button:hover {
+    /* button color */
+    background-color: rgba(141, 94, 160, 0.826);
+
+    /* text color */
+    text-shadow: 2px 2px 3px rgba(255, 197, 104, 0.611);
+}
+
+.contact-form > button:active {
+    /* button color */
+    background-color: transparent;
+    background-image: linear-gradient(to bottom right, rgb(218, 94, 227), rgb(52, 179, 215));
+
+}
+
+/* footer */
+
+.footer-links {
+    /* arrangment */
+    display: flex;
+    justify-content: space-evenly;
+}
+
+/* override default anchor style, because gradient makes it difficult to read */
+.footer-links > a {
+    /* text */
+    font-size: 1.5rem;
+    color: rgba(159, 227, 227, 0.864);
+}
+
+.footer-links > a:hover{
+    color: plum;
+}
+
+#copyright {
+    text-align: center;
+}
